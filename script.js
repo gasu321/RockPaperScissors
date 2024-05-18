@@ -40,13 +40,13 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "paper" ||
         humanChoice === "paper" && computerChoice === "scissors" ||
         humanChoice === "scissors" && computerChoice === "rock") {
-            return "You lose! lol!";
+            return `You lose! Score is now Computer:${++computerScore} and Human:${humanScore}`;
     }else if (humanChoice === "rock" && computerChoice === "scissors" ||
               humanChoice === "paper" && computerChoice === "rock" ||
               humanChoice === "scissors" && computerChoice === "paper") {
-                  return "You win!";
+                  return `You win! Score is now Computer:${computerScore} and Human:${++humanScore}`;
     }else {
-        return "It's a tie!"
+        return `It's a tie! Score is now Computer:${computerScore} and Human:${humanScore}`
     }
     
 
