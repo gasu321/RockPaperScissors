@@ -23,7 +23,7 @@ function getHumanChoice() {
         return "scissors".toLowerCase();
     } else if (choice === null) {
         console.log("You have cancelled the game. Refresh to start again.");
-        return;
+        return null;
     } else {
         alert("Input a valid answer");
         return getHumanChoice();
@@ -55,9 +55,19 @@ function playRound() {
 // Play game 5 times
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
+
+    //Loop with null condition
+
+    if (getHumanChoice() === null) {
+        return;
+    }else {
+        for (let i = 0; i < 5; i++) {
         console.log(playRound());
     }
+    } 
+    
+    // Determine winner after 5 rounds
+
     if (humanScore > computerScore) {
         return "Player wins";
     } else if (computerScore > humanScore) {
