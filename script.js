@@ -14,13 +14,16 @@ function getComputerChoice() {
 // Human choice function
 
 function getHumanChoice() {
-    let choice = prompt("Rock Paper or Scissors?").toLowerCase();
+    let choice = prompt("Rock Paper or Scissors?");
     if (choice === "rock") {
-        return "rock";
+        return "rock".toLowerCase();
     } else if (choice === "paper") {
-        return "paper";
+        return "paper".toLowerCase();
     } else if (choice === "scissors") {
-        return "scissors";
+        return "scissors".toLowerCase();
+    } else if (choice === null) {
+        console.log("You have cancelled the game. Refresh to start again.");
+        return;
     } else {
         alert("Input a valid answer");
         return getHumanChoice();
