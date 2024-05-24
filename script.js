@@ -4,7 +4,7 @@ function getComputerChoice() {
     let computerRoll = Math.random() * 100;
     if (computerRoll <= 33) {
         return "rock"
-    } else if (computerRoll <= 66 & computerRoll > 33) {
+    } else if (computerRoll <= 66 && computerRoll > 33) {
         return "paper"
     } else {
         return "scissors"
