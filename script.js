@@ -33,10 +33,9 @@ let computerScore = 0;
 
 // Playing a round function
 
-function playRound(humanChoice, computerChoice) {
-    humanChoice = getHumanChoice();
-    computerChoice = getComputerChoice();
-    console.log(computerChoice);
+function playRound() {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
     if (humanChoice === "rock" && computerChoice === "paper" ||
         humanChoice === "paper" && computerChoice === "scissors" ||
         humanChoice === "scissors" && computerChoice === "rock") {
@@ -52,4 +51,20 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
-console.log(playRound())
+// Play game 5 times
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound());
+    }
+    if (humanScore > computerScore) {
+        return "Player wins";
+    } else if (computerScore > humanScore) {
+        return "Computer wins";
+    } else {
+        return "It's a tie"
+    }
+}
+// Execute
+
+console.log(playGame());
