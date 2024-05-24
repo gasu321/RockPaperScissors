@@ -22,7 +22,8 @@ function getHumanChoice() {
     } else if (choice === "scissors") {
         return "scissors";
     } else {
-        return "Input a valid answer"
+        alert("Input a valid answer");
+        return getHumanChoice();
     }
 }
 
@@ -47,10 +48,7 @@ function playRound() {
     }else {
         return `It's a tie! Score is now Computer:${computerScore} and Human:${humanScore}`
     }
-    
-
 }
-
 // Play game 5 times
 
 function playGame() {
@@ -65,6 +63,7 @@ function playGame() {
         return "It's a tie"
     }
 }
+
 // Execute
 
 console.log(playGame());
